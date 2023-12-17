@@ -1,8 +1,11 @@
 import vk_api
+import os
+from dotenv import load_dotenv
 from random import randint, choice
 from vk_api.longpoll import VkLongPoll, VkEventType
 
-TOKEN = "TOKEN"
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 vkSession = vk_api.VkApi(token=TOKEN)
 longpoll = VkLongPoll(vkSession)
 vk = vkSession.get_api()
@@ -14,6 +17,7 @@ for event in longpoll.listen():
         if event.from_user:
             user = event.text.lower()
             bot = choice(vars)
+            dotenv.DotEnv(TOKEN)
             vk.messages.send(user_id = event.user_id, message = bot, random_id = randint(1, 10000))
             ont = None
             if bot == 'камень':
