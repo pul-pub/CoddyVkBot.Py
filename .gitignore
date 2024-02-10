@@ -164,4 +164,4 @@ cython_debug/
 .idea/vcs.xml
 .idea/modules.xml
 .idea/CoddyVkBot.Py.iml
-config.env
+.env
