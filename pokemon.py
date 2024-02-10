@@ -6,7 +6,7 @@ import vk_api
 from vk_api.longpoll import VkEventType, VkLongPoll
 from youtubesearchpython import VideosSearch
 
-TOKEN = "vk1.a.CHziGOs1cf-sjGndCHAOrRRBcFmp25X7l3SAlM-QUNvPmbAmeCX3Nif_iua5L00h4Vc9BoBdB_EJjk9YKmiTTNvBdCFqMF1rgTeqJ8L_j5iZPI_SgqFJP1e022j2J-e8V5qVJWXLJl6AyHLD92IB0UAGUX6M4kso3OGi1yPB8OFA3_QT4Pu9QTtMqUk5CjeiZIfKAwmy6a5kn-PDd2To5g"
+TOKEN = "-----------------------------TOKEN-------------------------------------"
 vk_sesion = vk_api.VkApi(token=TOKEN)
 longpoll = VkLongPoll(vk_sesion)
 vk = vk_sesion.get_api()
