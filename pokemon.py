@@ -5,8 +5,11 @@ import json
 import vk_api
 from vk_api.longpoll import VkEventType, VkLongPoll
 from youtubesearchpython import VideosSearch
+import os
+from dotenv import load_dotenv
 
-TOKEN = "-----------------------------TOKEN-------------------------------------"
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 vk_sesion = vk_api.VkApi(token=TOKEN)
 longpoll = VkLongPoll(vk_sesion)
 vk = vk_sesion.get_api()
